@@ -1,0 +1,265 @@
+/* Set the background, font, and layout for the body */
+body {
+    background: linear-gradient(135deg, #5a84b0, #0f2c4a);
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Style the title with color, size, and shadow */
+#title {
+    color: #e8f5e9;
+    font-size: 32px;
+    font-weight: 700;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    margin: 0;
+}
+
+/* Design the timer display with gradient background and centered text */
+#timer {
+    background: linear-gradient(180deg, #abcff5, #6986a4);
+    height: 120px;
+    width: 400px;
+    color: #1b4f7c;
+    font-size: 48px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+}
+
+/* Style buttons with rounded corners and hover effect */
+button {
+    border: none;
+    border-radius: 22px;
+    height: 40px;
+    padding: 0 20px;
+    min-width: 80px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+/* Add hover effect for buttons */
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for the start button */
+#start {
+    background-color: #abcff5;
+    color: #1b4f7c;
+}
+
+/* Style for the reset button */
+#reset {
+    background-color: #eeb5c9;
+    color: #1b4f7c;
+}
+
+/* Style for save and settings buttons */
+#save,
+#settingsBtn {
+    background-color: #abcff5;
+    color: #1b4f7c;
+}
+
+/* Layout for control buttons */
+.controls {
+    display: flex;
+    gap: 12px;
+    margin: 10px;
+}
+
+/* Style for time input fields */
+#focusTimeInput,
+#shortBreakTimeInput,
+#longBreakTimeInput {
+    background: rgba(27, 79, 124, 0.2);
+    border: 1px solid rgba(167, 215, 193, 0.3);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 16px;
+    color: #e8f5e9;
+    text-align: center;
+    width: 120px;
+    transition: 0.3s ease;
+    margin: 10px;
+}
+
+/* Focus effect for time input fields */
+#focusTimeInput:focus,
+#shortBreakTimeInput:focus,
+#longBreakTimeInput:focus {
+    outline: none;
+    border-color: #eeb5c9;
+    background: rgba(200, 230, 201, 0.25);
+}
+
+/* Layout for time settings */
+.time-set {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+/* Style for modal background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(27, 79, 124, 0.52);
+}
+
+/* Style for modal content */
+.modal-content {
+    background-color: #385e8a;
+    color: #e8f5e9;
+    margin: 10% auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for close button in modal */
+.close {
+    float: right;
+    font-size: 32px;
+    cursor: pointer;
+    color: #eeb5c9;
+}
+
+/* Hover effect for close button */
+.close:hover {
+    transform: translateY(-2px);
+}
+
+/* Remove arrows/spinners for number inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Remove spinner for Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+/* Layout for switch container */
+.switch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Style for toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default checkbox for switch */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Style for slider in toggle switch */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #abcff5;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+/* Style for slider knob */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+/* Change slider color when checked */
+input:checked+.slider {
+    background-color: #eeb5c9;
+}
+
+/* Move slider knob when checked */
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+/* Layout for session dots */
+#sessions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Style for session dots */
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: transparent;
+    display: inline-block;
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Style for half-filled session dots */
+.dot.half-filled::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background: #e8f5e9;
+    bottom: 0;
+    left: 0;
+}
+
+/* Style for fully filled session dots */
+.dot.filled {
+    background: #e8f5e9;
+}

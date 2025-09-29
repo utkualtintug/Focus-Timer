@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="../assets/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h2 id="title">Focus Timer</h2>
+    <div id="timer">25:00</div>
+    <div id="sessions">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div class="controls">
+        <button id="start">Start</button>
+        <button id="reset">Reset</button>
+    </div>
+
+    <div class="time-set">
+        <button id="settingsBtn">Settings</button>
+        <div id="settingsModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span> <!-- &times; = x -->
+                <h2>Settings</h2>
+                <label>
+                    Focuse time (minutes)
+                    <input id="focusTimeInput" type="number" min="0" max="1440">
+                </label>
+                <br><br>
+                <label>
+                    Short break time (minutes)
+                    <input id="shortBreakTimeInput" type="number" min="0" max="1440">
+                </label>
+                <br><br>
+                <label>
+                    Long break time (minutes)
+                    <input id="longBreakTimeInput" type="number" min="0" max="1440">
+                </label>
+                <br><br>
+                <div class="switch-container">
+                    Auto Start Sessions
+                    <label class="switch">
+                        <input type="checkbox" id="toggleSwitch">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                <br><br>
+                <button id="save">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
